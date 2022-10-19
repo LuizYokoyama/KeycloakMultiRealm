@@ -15,7 +15,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtIss
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	JwtIssuerAuthenticationManagerResolver authenticationManagerResolver = new JwtIssuerAuthenticationManagerResolver(
+	private final JwtIssuerAuthenticationManagerResolver authenticationManagerResolver = new JwtIssuerAuthenticationManagerResolver(
 			"http://localhost:8180/auth/realms/RealmTeste4",
 			"http://localhost:8180/auth/realms/RealmTeste3",
 			"http://localhost:8180/auth/realms/teste2",
